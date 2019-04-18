@@ -23,4 +23,4 @@ run:
     shopt -s dotglob
     source ci-utils/scripts/generate-pivotal-tracker-story.sh
     NEW_VERSION=$(cat release/version)
-    generate_pivtal_tracker_story "${ISSUE_COMPONENT}" "${NEW_VERSION}"
+    generate_pivtal_tracker_story "${ISSUE_COMPONENT}" "${NEW_VERSION}" "${LABELS}"
