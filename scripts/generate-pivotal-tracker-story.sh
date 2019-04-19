@@ -1,8 +1,8 @@
 create_story_payload() {
   name="$1 upgrade $2"
   description="This is an auto generated story created for $1 upgrade to $2"
-  labels=$(echo $3 | sed -e 's/\[/\"/g' | sed -e 's/,/\",\"/g' | sed -e 's/\]/\"/g')
-  echo '{"name":"'"$name"'","description":"'"$description"'","labels":['"$labels"']}'
+  labels="$3"
+  echo '{"name":"'"$name"'","description":"'"$description"'","labels":'${labels:-[]}'}'
 }
 
 generate_pivtal_tracker_story() {
